@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492a76256812c4049ab684c645c61ce1, type: 3}
+  m_Name: TV - nift
+  m_EditorClassIdentifier: 
+  dialogue: Pretty nifty right?
+  requiresResponse: 1
+  continuedDialogue: {fileID: 0}
+  playerResponses:
+  - {fileID: 11400000, guid: 9f35d94a26fee2a45887671653e529cb, type: 2}
+  - {fileID: 11400000, guid: 8282c3cc81fcafa41ac4b591f62ae0a0, type: 2}
+  - {fileID: 11400000, guid: 9aaa6e46901369745a58fa89a25c0ab9, type: 2}
+  limitedTime: 0
+  timeLimit: 0
+  canChangeTopic: 0
+  endOfConversation: 0

@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a55a72878a04644482fa4522139070c, type: 3}
+  m_Name: Tutorial Voice
+  m_EditorClassIdentifier: 
+  npcName: Tutorial Voice
+  npcGender: 
+  npcProfileID: 
+  npcEmotions:
+    personality:
+      happyMinThreshold: 0
+      sadMinThreshold: 0
+      angryMinThreshold: 0
+      nervousMinThreshold: 0
+      surprisedMinThreshold: 0
+      scaredMinThreshold: 0
+    emotion:
+      npcMood: 0
+      happiness: 0
+      stress: 0
+      shock: 0
+  npcDialogue:
+    greetingDialogue:
+    - {fileID: 11400000, guid: 33325655abdad784393704929343c8dc, type: 2}
+    goodbyeDialogue: []
+    changeTopicDialogue: []
+    dialogueConnections:
+    - playerDialogueInput: {fileID: 11400000, guid: 402a93d93cefef442a73af33b5cfc36e,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 0d7750b72a3cfc548869f93d1fa035aa, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: 48d02379553448642be20a64994d7a45,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 0d7750b72a3cfc548869f93d1fa035aa, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: 4e4374e3f0229c24ea2a781af2140401,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 509081c543125154aadc99fcc4890b13, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: ac50142f198a1d545a6762c8a69ae75c,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 7ef6b1b25bf3e354ea57d9c416b08cbc, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: 9a0138fd030a1674b97515678f67564e,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: b3879083d8af6a24ca5d76e807bd2fda, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: 92b45c8b50f7a9b4ba5f3de7024c5c00,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: b3879083d8af6a24ca5d76e807bd2fda, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: 9b1e60721d688a9408574b007a388dd4,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: d43129beaa0d96a48964a4a4ecc7e88a, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: 9008e769a419b8a41b33a3e0c0a54b01,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 53e8fd162a053d540bb6074b14f51db7, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: c36bf630a68dd5841ace54a42ebe56ef,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 33bd3e4086011b84385f68475e80408e, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: d9d9045da24ad414ea9dd5378d66a818,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: d58913cec7ca79c448508333add046b1, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: bc1e78b81e870474facd8f1cef882629,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 77a72a5dfe2058b41aab26b6a0fe744c, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: 687168e7db93a4c498f9a98d0d98ad04,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 71d93ea0597e3024c849272667dc75ac, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: e7a227e12d7fcb94ca53ce9f9024b81f,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: d1fa37db1b7b07b4293bf8cd35d0c54a, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: 17dde2537e58003449322d0a9d9a8cf5,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 08d1589a04349a94b81951dbc3bfeceb, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: 9f35d94a26fee2a45887671653e529cb,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: ce3d290484b3d2b4c800971d0026fe15, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: 8282c3cc81fcafa41ac4b591f62ae0a0,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 510024c3531e4c94d90a59ce9fec4ac4, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: 9aaa6e46901369745a58fa89a25c0ab9,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 510024c3531e4c94d90a59ce9fec4ac4, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: c4d860dead5e7ff48aba9fbe75e123bc,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: d1bddd4706d44e84880e563ecc98f50e, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: 3b46752fca1c0a74a9eabd23d6c8f57b,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 6e3883ceedc6cd44b902d35d4e23cb84, type: 2}
