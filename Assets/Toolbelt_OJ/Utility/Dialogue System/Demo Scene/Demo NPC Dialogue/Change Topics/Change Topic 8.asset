@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: Sure
   requiresResponse: 1
-  continuedDialogue: {fileID: 0}
+  continuedDialogue: {fileID: 11400000, guid: 31fb082aef695df4fa870ce3cad662b2, type: 2}
   playerResponses: []
   limitedTime: 0
   timeLimit: 0
   canChangeTopic: 1
   endOfConversation: 0
+  hasConditionalEvent: 0
+  conditionalEvents: []

@@ -16,3 +16,8 @@ MonoBehaviour:
   happinessEffect: 10
   stressEffect: 0
   shockEffect: 0
+  isGoodbyeOption: 0
+  isChangeTopicOption: 0
+  hasConditionalEvent: 1
+  conditionalEvents:
+  - {fileID: 11400000, guid: 6297e1e8dccaa0b4c9aabe4d401be695, type: 2}

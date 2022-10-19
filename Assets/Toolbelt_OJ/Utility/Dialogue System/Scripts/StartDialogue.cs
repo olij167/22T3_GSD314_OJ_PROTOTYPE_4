@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class StartDialogue : MonoBehaviour
 {
-    public ListDialogueSystem dialogueSystem;
-    [SerializeField] private PlayerDialogue playerDialogue;
+    [HideInInspector] public ListDialogueSystem dialogueSystem;
+    private PlayerDialogue playerDialogue;
 
-
+    private void Start()
+    {
+        dialogueSystem = FindObjectOfType<ListDialogueSystem>();
+        playerDialogue = FindObjectOfType<PlayerDialogue>();
+    }
     public void EnterDialogue( NPCInfo npcInfo)
     {
         //Set NPC
@@ -17,7 +21,7 @@ public class StartDialogue : MonoBehaviour
 
         dialogueSystem.npc = npcInfo;
         dialogueSystem.npc.npcEmotions.SetMood();
-        dialogueSystem.npcNameText.text = npcInfo.npcName;
+        dialogueSystem.npcNameText.text = npcInfo.npcName + ":";
 
         NPCDialogueOption greetingDialogue = npcInfo.npcDialogue.greetingDialogue[Random.Range(0, npcInfo.npcDialogue.greetingDialogue.Count)];
 
@@ -53,7 +57,7 @@ public class StartDialogue : MonoBehaviour
 
         dialogueSystem.npc = npc;
         dialogueSystem.npc.npcEmotions.SetMood();
-        dialogueSystem.npcNameText.text = npc.npcName;
+        dialogueSystem.npcNameText.text = npc.npcName + ":";
 
         NPCDialogueOption greetingDialogue = npc.npcDialogue.greetingDialogue[Random.Range(0, npc.npcDialogue.greetingDialogue.Count)];
         greetingDialogue.playerResponses = playerDialogue.SetPlayerQuestionsForNPC(npc, greetingDialogue).playerResponses;

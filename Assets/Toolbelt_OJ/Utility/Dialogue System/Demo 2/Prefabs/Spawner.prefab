@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6855424092250918082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6855424092250918081}
+  - component: {fileID: 6855424092250918080}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6855424092250918081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855424092250918082}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.89, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6855424092250918080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855424092250918082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ad81aa234fdc545b1089cfc4993e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcProfiles:
+  - {fileID: 11400000, guid: 35bcbe3e6020adc4dba27c553849b4e9, type: 2}
+  - {fileID: 11400000, guid: 75bd23dc2a6d0ad4dacdbdfa2afdf352, type: 2}
+  - {fileID: 11400000, guid: bbb8ab1cc90b302469ef4816574a5b47, type: 2}
+  - {fileID: 11400000, guid: c5cb5a72b0a9eca45a44957bfae99c77, type: 2}
+  - {fileID: 11400000, guid: a84c11aa922680149882a46760818276, type: 2}
+  maleNamesList: {fileID: 11400000, guid: eed5b301956866945a2bce29e2cc0663, type: 2}
+  femaleNamesList: {fileID: 11400000, guid: 6cc18ead01b1d4c4c8ab717791147426, type: 2}
+  npcPrefab: {fileID: 4964476417031152889, guid: da717522ba777124695d930d22fa8b31,
+    type: 3}
+  spawnRandomProfiles: 1
+  numToSpawn: 5
+  numToSpawnPerProfile: 2
+  playerDialogue: {fileID: 0}

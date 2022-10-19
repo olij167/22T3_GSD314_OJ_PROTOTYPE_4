@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 [CreateAssetMenu(menuName =("DialogueSystem/NPCDialogue"))]
 public class NPCDialogueOption : ScriptableObject
@@ -22,5 +24,11 @@ public class NPCDialogueOption : ScriptableObject
                                        //**unless there is a time limit
 
     public bool endOfConversation;
+
+    public bool hasConditionalEvent;
+
+    public List<ConditionalEvent> conditionalEvents;
+
+
 
 }

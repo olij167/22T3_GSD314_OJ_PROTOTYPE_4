@@ -157,10 +157,6 @@ public class DialogueSystem : MonoBehaviour
                     }
 
                 }
-                else
-                {
-                    ListDialogueOptions();
-                }
             }
             else
             {
@@ -290,28 +286,6 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-    }
-
-
-    private void ListDialogueOptions()
-    {
-
-        foreach (Transform child in listDialoguePanel.transform)
-        {
-            if (child != listDialoguePanel.transform.GetChild(0))
-            {
-                Destroy(child);
-            }
-        }
-
-        foreach (PlayerDialogueOption dialogue in npcDialogue.playerResponses)
-        {
-            TextMeshProUGUI newDialogue = Instantiate(playerDialoguePrefab, listDialoguePanel.transform.position, Quaternion.identity);
-            newDialogue.text = dialogue.dialogue;
-            newDialogue.GetComponent<DialogueListButton>().dialogueOption = dialogue;
-        }
-
-        //Create leave conversation / change topic buttons
     }
 
     // Update UI Dialogue Text

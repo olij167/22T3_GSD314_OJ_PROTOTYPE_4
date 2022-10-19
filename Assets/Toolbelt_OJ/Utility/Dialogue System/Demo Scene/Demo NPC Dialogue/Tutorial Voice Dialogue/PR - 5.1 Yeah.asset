@@ -16,3 +16,7 @@ MonoBehaviour:
   happinessEffect: 0
   stressEffect: 0
   shockEffect: 0
+  isGoodbyeOption: 0
+  isChangeTopicOption: 0
+  hasConditionalEvent: 0
+  conditionalEvents: []

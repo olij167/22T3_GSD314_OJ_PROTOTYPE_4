@@ -35,15 +35,15 @@ public class NPCGenerator : MonoBehaviour
 
         if (spawnRandomProfiles)
         {
-            SpawnNPCs();
+            SpawnNPCs(numToSpawn);
         }
         else
         {
-            SpawnNPCsPerProfile();
+            SpawnNPCsPerProfile(numToSpawnPerProfile);
         }
     }
 
-    public void SpawnNPCs()
+    public void SpawnNPCs(int numToSpawn)
     {
         List<NPCInfo> newNPCInfoList = new List<NPCInfo>();
 
@@ -72,14 +72,14 @@ public class NPCGenerator : MonoBehaviour
         }
     }
 
-    public void SpawnNPCsPerProfile()
+    public void SpawnNPCsPerProfile(int numPerProfile)
     {
 
         List<NPCInfo> newNPCInfoList = new List<NPCInfo>();
 
         for (int x = 0; x < npcProfiles.Count; x++)
         {
-            for (int i = 0; i < numToSpawnPerProfile; i++)
+            for (int i = 0; i < numPerProfile; i++)
             {
                 Vector3 spawnPos = GenerateRandomWayPoint();
                 GameObject newNPC = Instantiate(npcPrefab, spawnPos, Quaternion.identity);
@@ -101,7 +101,7 @@ public class NPCGenerator : MonoBehaviour
             }
         }
 
-        if (newNPCInfoList.Count == numToSpawnPerProfile * npcProfiles.Count)
+        if (newNPCInfoList.Count == numPerProfile * npcProfiles.Count)
         {
             AddNPCsToPlayerDialogue(newNPCInfoList);
         }

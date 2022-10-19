@@ -19,11 +19,14 @@ public class UnlockNewDialogue : MonoBehaviour
             foreach (NPCInfo npc in specificNPCList)
             {
                 playerDialogue.AddQuestionForSpecificNPC(newDialogueOption, npc);
+                playerDialogue.AddDialogueOptions();
             }
         }
         else
         {
             playerDialogue.AddQuestionForAllNPCs(newDialogueOption);
+            playerDialogue.AddDialogueOptions();
+
         }
     }
 }

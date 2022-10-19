@@ -13,7 +13,7 @@ public class PlayerDialogue : MonoBehaviour
 
     public PlayerDialogueOption viewMoreDialogue;
 
-    [HideInInspector] public NPCDialogueOption questions;
+    public NPCDialogueOption questions;
 
     [Serializable]
     public class PlayerQuestions
@@ -22,6 +22,8 @@ public class PlayerDialogue : MonoBehaviour
         public List<PlayerDialogueOption> questionsForNPC;
     }
 
+
+    // npc & respective dialogue options set at runtime
     public List<PlayerQuestions> playerQuestions;
 
 

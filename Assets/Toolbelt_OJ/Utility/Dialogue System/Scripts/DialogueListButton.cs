@@ -10,6 +10,8 @@ public class DialogueListButton : MonoBehaviour
     private void Awake()
     {
         dialogueSystem = FindObjectOfType<ListDialogueSystem>();
+
+        //DialogueEvents.current.onUpdateDialogue += OnClickSelectDialogue;
     }
 
     public void OnClickSelectDialogue()

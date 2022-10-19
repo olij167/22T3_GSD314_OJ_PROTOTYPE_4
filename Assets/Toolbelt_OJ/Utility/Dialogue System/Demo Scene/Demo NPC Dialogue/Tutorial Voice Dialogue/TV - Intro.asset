@@ -25,3 +25,5 @@ MonoBehaviour:
   timeLimit: 0
   canChangeTopic: 0
   endOfConversation: 0
+  hasConditionalEvent: 0
+  conditionalEvents: []
