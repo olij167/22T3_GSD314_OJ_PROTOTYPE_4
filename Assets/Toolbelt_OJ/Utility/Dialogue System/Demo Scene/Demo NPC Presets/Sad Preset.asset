@@ -24,10 +24,10 @@ MonoBehaviour:
       surprisedMinThreshold: 20
       scaredMinThreshold: -15
     emotion:
-      npcMood: 0
-      happiness: 0
-      stress: -10
-      shock: 20
+      npcMood: 15
+      happiness: 15
+      stress: 35
+      shock: 35
   npcDialogue:
     greetingDialogue:
     - {fileID: 11400000, guid: 29d901ccb70561846acb01855bd922b6, type: 2}
@@ -378,3 +378,8 @@ MonoBehaviour:
       npcResponses:
       - npcMood: 0
         response: {fileID: 11400000, guid: 7ccc29b9d9a7b1d4d82bdf50151419d4, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: a61c698cb8c860143b6a251fd840ce8a,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 3a904161eddf26346ba7d2abae917feb, type: 2}

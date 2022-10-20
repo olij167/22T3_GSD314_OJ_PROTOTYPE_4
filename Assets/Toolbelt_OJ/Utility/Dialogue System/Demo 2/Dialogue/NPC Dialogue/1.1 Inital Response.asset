@@ -15,10 +15,26 @@ MonoBehaviour:
   dialogue: You know that's actually a funny story, let me tell you about it
   requiresResponse: 0
   continuedDialogue: {fileID: 11400000, guid: 67a16d5bc307628448be363855ff23b7, type: 2}
-  playerResponses: []
+  playerResponses:
+  - {fileID: 11400000, guid: 65eb689a2ba2407439c0c342131ab4a3, type: 2}
+  - {fileID: 11400000, guid: 272b8178c0353504883f7a879d762781, type: 2}
+  - {fileID: 11400000, guid: 90bea573acec8fb4fb4b27b5d71f3a71, type: 2}
+  - {fileID: 11400000, guid: 3f326ae4fed9eb14681d5bf15bb69b91, type: 2}
+  - {fileID: 11400000, guid: ef887382912e3b7428b24fa5878e002a, type: 2}
+  - {fileID: 11400000, guid: 25bdd6bdaef9bb34aae4e9cfb0925d82, type: 2}
+  - {fileID: 11400000, guid: 24ae3144da10dff4d8ec9d293385c933, type: 2}
+  - {fileID: 11400000, guid: ecefed327cfc30a40b087ef154e39071, type: 2}
+  - {fileID: 11400000, guid: c57906175ea68b54393d47cc4e8019b1, type: 2}
+  - {fileID: 11400000, guid: 46be0313d2b9c18438202caffbec0752, type: 2}
+  - {fileID: 11400000, guid: 9b81b44cdca127745aa6d1cf1c7e620c, type: 2}
+  - {fileID: 11400000, guid: 46be0313d2b9c18438202caffbec0752, type: 2}
+  - {fileID: 11400000, guid: 46be0313d2b9c18438202caffbec0752, type: 2}
+  - {fileID: 11400000, guid: 46be0313d2b9c18438202caffbec0752, type: 2}
+  - {fileID: 11400000, guid: 46be0313d2b9c18438202caffbec0752, type: 2}
+  - {fileID: 11400000, guid: 46be0313d2b9c18438202caffbec0752, type: 2}
   limitedTime: 0
   timeLimit: 0
-  canChangeTopic: 0
+  playerCanChangeTopic: 0
   endOfConversation: 0
-  hasConditionalEvent: 0
+  changeOfTopic: 0
   conditionalEvents: []

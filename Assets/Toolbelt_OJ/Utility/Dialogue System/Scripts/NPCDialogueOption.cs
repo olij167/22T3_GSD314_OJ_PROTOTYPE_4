@@ -26,7 +26,7 @@ public class NPCDialogueOption : ScriptableObject
     public bool endOfConversation;
     public bool changeOfTopic; // forced topic change by NPC
 
-    //public List<ConditionalEvent> conditionalEvents;
+    public List<UnityEvent> conditionalEvents;
 
 
 

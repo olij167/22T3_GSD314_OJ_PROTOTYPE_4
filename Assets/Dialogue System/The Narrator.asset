@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a55a72878a04644482fa4522139070c, type: 3}
+  m_Name: The Narrator
+  m_EditorClassIdentifier: 
+  npcName: 'The Narrator:'
+  npcGender: 
+  npcProfileID: 66
+  npcEmotions:
+    personality:
+      happyMinThreshold: 100
+      sadMinThreshold: 100
+      angryMinThreshold: 100
+      nervousMinThreshold: 100
+      surprisedMinThreshold: 100
+      scaredMinThreshold: 100
+    emotion:
+      npcMood: 0
+      happiness: 0
+      stress: 0
+      shock: 0
+  npcDialogue:
+    greetingDialogue: []
+    goodbyeDialogue: []
+    changeTopicDialogue: []
+    dialogueConnections:
+    - playerDialogueInput: {fileID: 11400000, guid: d41a82d7c2b075741b0e37632b7cf6a7,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: a2ca62f5082435041a1c512e22b3e0cc, type: 2}

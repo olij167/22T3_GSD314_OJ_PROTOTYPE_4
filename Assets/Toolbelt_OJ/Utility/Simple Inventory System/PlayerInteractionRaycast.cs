@@ -29,6 +29,7 @@ public class PlayerInteractionRaycast : MonoBehaviour
 
     //[SerializeField] private bool isItem, isNPC;
     [SerializeField] private bool isNPC;
+    [SerializeField] private bool isWorldDialogue;
 
 
     void Start()
@@ -61,6 +62,16 @@ public class PlayerInteractionRaycast : MonoBehaviour
             //{
             //    isItem = false;
             //}
+            if (hit.transform.GetComponent<DialogueInWorld>())
+            {
+                selectedObject = hit.transform.gameObject;
+                interactIndicator.SetActive(true);
+                isWorldDialogue = true;
+            }
+            else
+            {
+                isWorldDialogue = false;
+            }
 
             if (hit.transform.GetComponent<NPCBrain>())
             {
@@ -81,6 +92,12 @@ public class PlayerInteractionRaycast : MonoBehaviour
                 {
                     SelectNPC();
                     selectedObject.transform.GetComponent<NPCBrain>().isSpeakingToPlayer = true;
+                }
+
+                if (isWorldDialogue)
+                {
+                    ActivateDialogueSystem();
+                    Debug.Log("Hit dialogue in world game object");
                 }
 
                 //if (isItem)
@@ -113,6 +130,17 @@ public class PlayerInteractionRaycast : MonoBehaviour
                 Debug.Log("NPC Selected: " + selectedObject.GetComponent<NPCBrain>().npcInfo.npcName);
                 initiateDialogue.EnterDialogue(selectedObject.GetComponent<NPCBrain>().npcInfo);
             }
+        }
+    }
+
+    public void ActivateDialogueSystem()
+    {
+        if (selectedObject != null && selectedObject.GetComponent<DialogueInWorld>())
+        {
+            DialogueInWorld dialogueInWorld = selectedObject.GetComponent<DialogueInWorld>();
+            Debug.Log("Dialogue Beginning: " + dialogueInWorld.dialogueFromWorld.name);
+
+            initiateDialogue.NPCInitiatedDialogue(dialogueInWorld.narrator, dialogueInWorld.dialogueFromWorld);
         }
     }
 

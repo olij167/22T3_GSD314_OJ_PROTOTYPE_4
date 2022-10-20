@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 492a76256812c4049ab684c645c61ce1, type: 3}
   m_Name: NPCChangeTopic
   m_EditorClassIdentifier: 
-  dialogue: Is there anything else I can do for you?
+  dialogue: Anyway, is there anything else I can do for you?
   requiresResponse: 1
   continuedDialogue: {fileID: 0}
   playerResponses: []
   limitedTime: 0
   timeLimit: 0
-  canChangeTopic: 0
+  playerCanChangeTopic: 0
   endOfConversation: 0
-  hasConditionalEvent: 0
+  changeOfTopic: 1
   conditionalEvents: []

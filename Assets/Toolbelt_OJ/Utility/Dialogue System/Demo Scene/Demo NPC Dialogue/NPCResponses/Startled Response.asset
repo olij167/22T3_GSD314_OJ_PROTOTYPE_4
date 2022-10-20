@@ -18,4 +18,7 @@ MonoBehaviour:
   playerResponses: []
   limitedTime: 0
   timeLimit: 0
-  canChangeTopic: 1
+  playerCanChangeTopic: 1
+  endOfConversation: 0
+  changeOfTopic: 0
+  conditionalEvents: []

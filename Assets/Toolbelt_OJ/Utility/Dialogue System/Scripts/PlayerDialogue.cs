@@ -87,7 +87,7 @@ public class PlayerDialogue : MonoBehaviour
 
                 for (int d = 0; d < playerQuestions[i].npc.npcDialogue.dialogueConnections.Count; d++) //for each npc dialogue object of each npc
                 {
-                    if (!playerQuestions[i].npc.npcDialogue.dialogueConnections[d].playerDialogueInput.isResponseToNPCDialogue) // check the dialogue object if the player is responding
+                    if (!playerQuestions[i].npc.npcDialogue.dialogueConnections[d].playerDialogueInput.isResponseToNPCDialogue && !playerQuestions[i].npc.npcDialogue.dialogueConnections[d].playerDialogueInput.isLocked) // check the dialogue object if the player is responding
                     {
                         playerQuestions[i].questionsForNPC.Add(playerQuestions[i].npc.npcDialogue.dialogueConnections[d].playerDialogueInput); //if not add it to the player's current dialogue selection
                     }
@@ -102,6 +102,20 @@ public class PlayerDialogue : MonoBehaviour
         }
     }
 
+    //public void AddWorldDialogueOptions()
+    //{
+    //    for (int i = 0; i < playerQuestions.Count; i++)
+    //    {
+    //        foreach (DialogueInWorld dialogue in FindObjectsOfType<DialogueInWorld>())
+    //        {
+    //            if (playerQuestions[i].npc == dialogue.narrator)
+    //            {
+    //                playerQuestions[i].questionsForNPC.Add(dialogue.dialogueFromWorld);
+    //            }
+    //        }
+    //    }
+    //}
+
     public void AddResponseOptions()
     {
         for (int i = 0; i < playerQuestions.Count; i++)
@@ -113,7 +127,7 @@ public class PlayerDialogue : MonoBehaviour
 
                 for (int d = 0; d < playerQuestions[i].npc.npcDialogue.dialogueConnections.Count; d++) //for each npc dialogue object of each npc
                 {
-                    if (playerQuestions[i].npc.npcDialogue.dialogueConnections[d].playerDialogueInput.isResponseToNPCDialogue) // check the dialogue object if the player is responding
+                    if (playerQuestions[i].npc.npcDialogue.dialogueConnections[d].playerDialogueInput.isResponseToNPCDialogue && !playerQuestions[i].npc.npcDialogue.dialogueConnections[d].playerDialogueInput.isLocked) // check the dialogue object if the player is responding
                     {
                         if (FindObjectOfType<NEWListDialogueSystem>().npcDialogue.playerResponses.Contains(playerQuestions[i].npc.npcDialogue.dialogueConnections[d].playerDialogueInput)) //if they are responding check what dialogue it is a response to
                         {

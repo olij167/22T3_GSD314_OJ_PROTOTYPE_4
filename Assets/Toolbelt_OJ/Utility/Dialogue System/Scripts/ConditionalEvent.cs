@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [CreateAssetMenu(menuName = "DialogueSystem/ConditionalEvent")]
-public class ConditionalEvent : ScriptableObject
+public class ConditionalEvents : MonoBehaviour
 {
     public UnityEvent conditionalEvent;
 
-[Header("Variables for 'AddDialogue events'")]
+[Header("Variables for Specific Events")]
     //public PlayerDialogueOption dialogue;
-    public NPCInfo npc;
+    [HideInInspector] public NPCInfo npc;
+    
 
     public NPCInfo SetNPC(NPCInfo npcToSet)
     {
@@ -45,6 +46,11 @@ public class ConditionalEvent : ScriptableObject
 
         playerDialogue.AddQuestionForSpecificNPC(dialogue, npc);
 
+        if (dialogue.isLocked)
+        {
+            dialogue.isLocked = false;
+        }
+
         if (!dialogue.isResponseToNPCDialogue)
         {
             playerDialogue.AddDialogueOptions();
@@ -55,6 +61,9 @@ public class ConditionalEvent : ScriptableObject
         }
 
     }
+
+    
+
 
 
     // To Make:

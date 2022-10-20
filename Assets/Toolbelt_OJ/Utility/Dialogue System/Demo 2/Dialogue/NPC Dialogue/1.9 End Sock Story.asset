@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492a76256812c4049ab684c645c61ce1, type: 3}
+  m_Name: 1.9 End Sock Story
+  m_EditorClassIdentifier: 
+  dialogue: So yeah..
+  requiresResponse: 1
+  continuedDialogue: {fileID: 0}
+  playerResponses:
+  - {fileID: 11400000, guid: eb0b08051054b4746bbaeaf55deac38c, type: 2}
+  - {fileID: 11400000, guid: b09fd177b554c7144bb60326cbef65f0, type: 2}
+  - {fileID: 11400000, guid: e3d1d66f539067046a0ab62b9cd4a96c, type: 2}
+  - {fileID: 11400000, guid: 46be0313d2b9c18438202caffbec0752, type: 2}
+  - {fileID: 11400000, guid: 46be0313d2b9c18438202caffbec0752, type: 2}
+  - {fileID: 11400000, guid: 46be0313d2b9c18438202caffbec0752, type: 2}
+  limitedTime: 1
+  timeLimit: 5
+  playerCanChangeTopic: 1
+  endOfConversation: 0
+  changeOfTopic: 1
+  conditionalEvents:
+  - {fileID: 11400000, guid: 46e8f58002e0e724e91662f17f71890c, type: 2}

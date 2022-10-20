@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492a76256812c4049ab684c645c61ce1, type: 3}
+  m_Name: 1.7 Sock Story
+  m_EditorClassIdentifier: 
+  dialogue: but eventually I chose some and let me tell you
+  requiresResponse: 0
+  continuedDialogue: {fileID: 11400000, guid: 0c91ed37924b9024882f17e7c45dd744, type: 2}
+  playerResponses:
+  - {fileID: 11400000, guid: 65eb689a2ba2407439c0c342131ab4a3, type: 2}
+  - {fileID: 11400000, guid: 272b8178c0353504883f7a879d762781, type: 2}
+  - {fileID: 11400000, guid: 90bea573acec8fb4fb4b27b5d71f3a71, type: 2}
+  - {fileID: 11400000, guid: 3f326ae4fed9eb14681d5bf15bb69b91, type: 2}
+  - {fileID: 11400000, guid: ef887382912e3b7428b24fa5878e002a, type: 2}
+  - {fileID: 11400000, guid: 25bdd6bdaef9bb34aae4e9cfb0925d82, type: 2}
+  - {fileID: 11400000, guid: 24ae3144da10dff4d8ec9d293385c933, type: 2}
+  - {fileID: 11400000, guid: ecefed327cfc30a40b087ef154e39071, type: 2}
+  - {fileID: 11400000, guid: d422626a190c46c4e874f9cf64dff9a6, type: 2}
+  - {fileID: 11400000, guid: 46be0313d2b9c18438202caffbec0752, type: 2}
+  - {fileID: 11400000, guid: 46be0313d2b9c18438202caffbec0752, type: 2}
+  - {fileID: 11400000, guid: 46be0313d2b9c18438202caffbec0752, type: 2}
+  limitedTime: 0
+  timeLimit: 0
+  playerCanChangeTopic: 0
+  endOfConversation: 0
+  changeOfTopic: 0
+  conditionalEvents: []

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492a76256812c4049ab684c645c61ce1, type: 3}
+  m_Name: Bed Yes NPC Response
+  m_EditorClassIdentifier: 
+  dialogue: Well too bad
+  requiresResponse: 0
+  continuedDialogue: {fileID: 0}
+  playerResponses:
+  - {fileID: 11400000, guid: 46be0313d2b9c18438202caffbec0752, type: 2}
+  limitedTime: 0
+  timeLimit: 5
+  playerCanChangeTopic: 1
+  endOfConversation: 1
+  changeOfTopic: 0
+  conditionalEvents: []

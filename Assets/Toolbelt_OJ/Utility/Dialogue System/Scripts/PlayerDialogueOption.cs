@@ -18,7 +18,9 @@ public class PlayerDialogueOption : ScriptableObject
 
     public bool isGoodbyeOption, isChangeTopicOption;
 
-    //public List<ConditionalEvent> conditionalEvents;
+    public bool isLocked = false;
+
+    public List<UnityEvent> conditionalEvents;
 
     public NPCEmotions.NPCFeelings AffectEmotionValues(NPCEmotions.NPCFeelings npcEmotions)
     {
