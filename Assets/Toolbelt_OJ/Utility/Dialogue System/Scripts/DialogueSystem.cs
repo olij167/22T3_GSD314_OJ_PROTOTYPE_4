@@ -250,7 +250,7 @@ public class DialogueSystem : MonoBehaviour
         }
 
         //select Leave Conversation
-        if (playerIsSpeaking && npcDialogue.canChangeTopic && !npcDialogue.limitedTime)
+        if (playerIsSpeaking && npcDialogue.playerCanChangeTopic && !npcDialogue.limitedTime)
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
@@ -264,7 +264,7 @@ public class DialogueSystem : MonoBehaviour
         }
 
         //select Change Topic / View more responses
-        if (playerIsSpeaking && npcDialogue.canChangeTopic && !npcDialogue.limitedTime)
+        if (playerIsSpeaking && npcDialogue.playerCanChangeTopic && !npcDialogue.limitedTime)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -301,7 +301,7 @@ public class DialogueSystem : MonoBehaviour
         {
             if (npcDialogue.playerResponses.Count <= 0)
             {
-                npcDialogue.playerResponses = playerDialogue.SetPlayerQuestionsForNPC(npc, npcDialogue).playerResponses;
+                npcDialogue.playerResponses = playerDialogue.SetPlayerDialogueBasedOnCurrentNPCAndDialogue(npc, npcDialogue).playerResponses;
             }
 
             if (!npcDialogue == playerDialogue.questions)
@@ -528,7 +528,7 @@ public class DialogueSystem : MonoBehaviour
     private void ChangeTopic()
     {
         // get stored inquiries depending on NPC
-        npcDialogue = playerDialogue.SetPlayerQuestionsForNPC(npc, npc.npcDialogue.changeTopicDialogue[Random.Range(0, npc.npcDialogue.changeTopicDialogue.Count)]);
+        npcDialogue = playerDialogue.SetPlayerDialogueBasedOnCurrentNPCAndDialogue(npc, npc.npcDialogue.changeTopicDialogue[Random.Range(0, npc.npcDialogue.changeTopicDialogue.Count)]);
 
 
         //npcDialogue = playerDialogue.questions;

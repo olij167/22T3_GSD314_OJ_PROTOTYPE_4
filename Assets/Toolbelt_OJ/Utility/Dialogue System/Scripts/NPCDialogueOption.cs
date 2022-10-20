@@ -20,14 +20,13 @@ public class NPCDialogueOption : ScriptableObject
     public bool limitedTime; // If true player will need to respond within a time limit, when the time runs out the currently selected option will be said
     public float timeLimit;
 
-    public bool canChangeTopic = true; //if true the player will be able to change the topic or leave when responding
+    public bool playerCanChangeTopic = true; //if true the player will be able to change the topic or leave when responding
                                        //**unless there is a time limit
 
     public bool endOfConversation;
+    public bool changeOfTopic; // forced topic change by NPC
 
-    public bool hasConditionalEvent;
-
-    public List<ConditionalEvent> conditionalEvents;
+    //public List<ConditionalEvent> conditionalEvents;
 
 
 

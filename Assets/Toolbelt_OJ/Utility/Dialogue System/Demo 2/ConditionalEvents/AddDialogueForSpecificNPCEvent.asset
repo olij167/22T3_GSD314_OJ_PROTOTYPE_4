@@ -17,15 +17,15 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000}
         m_TargetAssemblyTypeName: ConditionalEvent, Assembly-CSharp
-        m_MethodName: AddDialogueForSpecificNPCBasedOnStats
-        m_Mode: 1
+        m_MethodName: AddDialogueForSpecificNPC
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: a61c698cb8c860143b6a251fd840ce8a,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: PlayerDialogueOption, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  dialogue: {fileID: 11400000, guid: a61c698cb8c860143b6a251fd840ce8a, type: 2}
-  npc: {fileID: 11400000, guid: 75bd23dc2a6d0ad4dacdbdfa2afdf352, type: 2}
+  npc: {fileID: 0}

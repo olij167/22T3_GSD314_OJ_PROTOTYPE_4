@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class DialogueListButton : MonoBehaviour
 {
-    public ListDialogueSystem dialogueSystem;
+    public NEWListDialogueSystem dialogueSystem;
     public PlayerDialogueOption dialogueOption;
 
     private void Awake()
     {
-        dialogueSystem = FindObjectOfType<ListDialogueSystem>();
+        dialogueSystem = FindObjectOfType<NEWListDialogueSystem>();
 
         //DialogueEvents.current.onUpdateDialogue += OnClickSelectDialogue;
     }
@@ -18,29 +18,17 @@ public class DialogueListButton : MonoBehaviour
     {
         dialogueSystem.selectedDialogueOption = dialogueOption;
 
-        //Debug.Log("Selected Dialogue = " + dialogueOption.dialogue);
-
-        if (dialogueSystem.npcDialogue.requiresResponse)
+        if (dialogueOption.isGoodbyeOption)
         {
-            //Debug.Log("It's a goodbye right? = " + dialogueOption.isGoodbyeOption);
-            //Debug.Log("It's a change topic right? = " + dialogueOption.isChangeTopicOption);
-
-            if (dialogueOption.isGoodbyeOption)
-            {
-                dialogueSystem.LeaveDialogue();
-            }
-            else if (dialogueOption.isChangeTopicOption)
-            {
-                dialogueSystem.ChangeTopic();
-            }
-            else
-            {
-                dialogueSystem.LockInResponse();
-            }
+            dialogueSystem.LeaveDialogue();
         }
-        else
+        
+        if (dialogueOption.isChangeTopicOption)
         {
-            dialogueSystem.LockInResponse();
+            dialogueSystem.ChangeTopic();
         }
+
+        dialogueSystem.LockInResponse();
+        Debug.Log("Button Clicked");
     }
 }

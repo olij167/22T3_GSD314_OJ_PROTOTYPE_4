@@ -35,7 +35,7 @@ public class NPCGenerator : MonoBehaviour
 
         if (spawnRandomProfiles)
         {
-            SpawnNPCs(numToSpawn);
+            SpawnRandomNPCs(numToSpawn);
         }
         else
         {
@@ -43,7 +43,7 @@ public class NPCGenerator : MonoBehaviour
         }
     }
 
-    public void SpawnNPCs(int numToSpawn)
+    public void SpawnRandomNPCs(int numToSpawn)
     {
         List<NPCInfo> newNPCInfoList = new List<NPCInfo>();
 
@@ -61,7 +61,6 @@ public class NPCGenerator : MonoBehaviour
 
             newNPC.GetComponent<NPCBrain>().SerializeNPCInfo(newInfo);
 
-            //playerDialogue.GenerateQuestionsForRandomNPCs(newInfo);
             newNPCInfoList.Add(newInfo);
 
         }
@@ -221,24 +220,24 @@ public class NPCGenerator : MonoBehaviour
 
     public void AddNPCsToPlayerDialogue(List<NPCInfo> npcInfoList)
     {
-        //playerDialogue.playerQuestions.Clear();
+        playerDialogue.playerQuestions.Clear();
 
         for (int i = 0; i < npcInfoList.Count; i++)
         {
             // Add random NPC's & Questions to new list
-            PlayerDialogue.PlayerQuestions newNPCQuestions = new PlayerDialogue.PlayerQuestions();
+            PlayerDialogue.PlayerQuestions newPlayerQuestions = new PlayerDialogue.PlayerQuestions();
 
-            newNPCQuestions.npc = npcInfoList[i];
+            newPlayerQuestions.npc = npcInfoList[i];
 
             //Debug.Log("Generating questions for: " + npcInfoList[i].npcName);
 
 
-            playerDialogue.playerQuestions.Add(newNPCQuestions);
+            playerDialogue.playerQuestions.Add(newPlayerQuestions);
 
             
         }
 
-        playerDialogue.AddDialogueOptions();
+        //playerDialogue.AddDialogueOptions();
     } 
     
 

@@ -5,28 +5,17 @@ using UnityEngine;
 //Add method to enable this script in other object
 public class UnlockNewDialogue : MonoBehaviour
 {
-    private PlayerDialogue playerDialogue;
-    [SerializeField] private PlayerDialogueOption newDialogueOption;
-    [SerializeField] private bool forSpecificNPC;
-    [SerializeField] private List<NPCInfo> specificNPCList;
+    private PlayerDialogue playerDialogue = FindObjectOfType<PlayerDialogue>();
 
-    private void OnEnable()
+    public void UnlockDialogueForAll(PlayerDialogueOption dialogueOption)
     {
-        playerDialogue = FindObjectOfType<PlayerDialogue>();
+        playerDialogue.AddQuestionForAllNPCs(dialogueOption);
+        playerDialogue.AddDialogueOptions();
+    }
 
-        if (forSpecificNPC)
-        {
-            foreach (NPCInfo npc in specificNPCList)
-            {
-                playerDialogue.AddQuestionForSpecificNPC(newDialogueOption, npc);
-                playerDialogue.AddDialogueOptions();
-            }
-        }
-        else
-        {
-            playerDialogue.AddQuestionForAllNPCs(newDialogueOption);
-            playerDialogue.AddDialogueOptions();
-
-        }
+    public void UnlockDialogueForSpecificNPC(NPCInfo npc, PlayerDialogueOption dialogueOption)
+    {
+        playerDialogue.AddQuestionForSpecificNPC(dialogueOption, npc);
+        playerDialogue.AddDialogueOptions();
     }
 }

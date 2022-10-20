@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e73e5623b3310641b5ddddffe5c75ac, type: 3}
-  m_Name: DecreaseHappiness
+  m_Name: Continue Dialogue
   m_EditorClassIdentifier: 
-  dialogue: This will make you sadder
-  happinessEffect: -10
+  dialogue: "\t.\t.\t.\t\n"
+  happinessEffect: 0
   stressEffect: 0
   shockEffect: 0
   isResponseToNPCDialogue: 0

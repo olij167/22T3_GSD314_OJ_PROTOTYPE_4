@@ -24,10 +24,10 @@ MonoBehaviour:
       surprisedMinThreshold: 20
       scaredMinThreshold: -15
     emotion:
-      npcMood: 2
-      happiness: -30
-      stress: 0
-      shock: 0
+      npcMood: 0
+      happiness: 0
+      stress: -10
+      shock: 20
   npcDialogue:
     greetingDialogue:
     - {fileID: 11400000, guid: 29d901ccb70561846acb01855bd922b6, type: 2}
@@ -358,3 +358,23 @@ MonoBehaviour:
         response: {fileID: 11400000, guid: 73396725381dc814dbbe5bcc5b86b736, type: 2}
       - npcMood: 19
         response: {fileID: 11400000, guid: 8fef7d26de4e04b47932ee5558279b37, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: ecefed327cfc30a40b087ef154e39071,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 0501668eb613a73429db1dd22afcefe7, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: eb0b08051054b4746bbaeaf55deac38c,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 7ccc29b9d9a7b1d4d82bdf50151419d4, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: b09fd177b554c7144bb60326cbef65f0,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 7ccc29b9d9a7b1d4d82bdf50151419d4, type: 2}
+    - playerDialogueInput: {fileID: 11400000, guid: e3d1d66f539067046a0ab62b9cd4a96c,
+        type: 2}
+      npcResponses:
+      - npcMood: 0
+        response: {fileID: 11400000, guid: 7ccc29b9d9a7b1d4d82bdf50151419d4, type: 2}

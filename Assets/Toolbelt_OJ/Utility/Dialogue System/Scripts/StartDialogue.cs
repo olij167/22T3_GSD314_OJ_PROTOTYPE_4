@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class StartDialogue : MonoBehaviour
 {
-    [HideInInspector] public ListDialogueSystem dialogueSystem;
+    [HideInInspector] public NEWListDialogueSystem dialogueSystem;
     private PlayerDialogue playerDialogue;
 
     private void Start()
     {
-        dialogueSystem = FindObjectOfType<ListDialogueSystem>();
+        dialogueSystem = FindObjectOfType<NEWListDialogueSystem>();
         playerDialogue = FindObjectOfType<PlayerDialogue>();
     }
     public void EnterDialogue( NPCInfo npcInfo)
@@ -25,8 +25,8 @@ public class StartDialogue : MonoBehaviour
 
         NPCDialogueOption greetingDialogue = npcInfo.npcDialogue.greetingDialogue[Random.Range(0, npcInfo.npcDialogue.greetingDialogue.Count)];
 
-
-        greetingDialogue.playerResponses = playerDialogue.SetPlayerQuestionsForNPC(npcInfo, greetingDialogue).playerResponses;
+        playerDialogue.AddDialogueOptions();
+        greetingDialogue.playerResponses = playerDialogue.SetPlayerDialogueBasedOnCurrentNPCAndDialogue(npcInfo, greetingDialogue).playerResponses;
         //dialogueSystem.ListDialogueOptions();
 
 
@@ -44,7 +44,7 @@ public class StartDialogue : MonoBehaviour
         dialogueSystem.BeginDialogue();
 
         dialogueSystem.SetNewDialogueText(greetingDialogue);
-        dialogueSystem.ListDialogueOptions();
+        //dialogueSystem.CreateDialogueOptions(greetingDialogue);
 
     }
 
@@ -60,7 +60,10 @@ public class StartDialogue : MonoBehaviour
         dialogueSystem.npcNameText.text = npc.npcName + ":";
 
         NPCDialogueOption greetingDialogue = npc.npcDialogue.greetingDialogue[Random.Range(0, npc.npcDialogue.greetingDialogue.Count)];
-        greetingDialogue.playerResponses = playerDialogue.SetPlayerQuestionsForNPC(npc, greetingDialogue).playerResponses;
+
+        greetingDialogue.playerResponses = playerDialogue.SetPlayerDialogueBasedOnCurrentNPCAndDialogue(npc, greetingDialogue).playerResponses;
+        playerDialogue.AddResponseOptions();
+
 
 
         dialogueSystem.playerDialogueText.text = playerDialogue.greetingDialogue[Random.Range(0, playerDialogue.greetingDialogue.Count)].dialogue;

@@ -9,60 +9,89 @@ public class ConditionalEvent : ScriptableObject
     public UnityEvent conditionalEvent;
 
 [Header("Variables for 'AddDialogue events'")]
-    public PlayerDialogueOption dialogue;
+    //public PlayerDialogueOption dialogue;
     public NPCInfo npc;
 
-
-
-    //Add conditional events as methods
+    public NPCInfo SetNPC(NPCInfo npcToSet)
+    {
+        return npc = npcToSet;
+    }
 
     public void ConditionalEventTest()
     {
         Debug.Log("Conditional Event Works!");
     }
 
-    public void ApplyPlayerStatEffect()
+    public void AddDialogueForAllNPCs(PlayerDialogueOption dialogue)
     {
-        //get player stats
-        //apply stat effects
+        PlayerDialogue playerDialogue = FindObjectOfType<PlayerDialogue>();
+
+        playerDialogue.AddQuestionForAllNPCs(dialogue);
+
+        if (!dialogue.isResponseToNPCDialogue)
+        {
+            playerDialogue.AddDialogueOptions();
+        }
+        else
+        {
+            playerDialogue.AddResponseOptions();
+        }
 
     }
 
-    public void CheckPlayerStatsForHighest()
+    public void AddDialogueForSpecificNPC(PlayerDialogueOption dialogue)
     {
-        //compare current player stats and return whichever has the highest value
-    } 
-    
-    public void CheckPlayerStatsForLowest()
-    {
-        //compare current player stats and return whichever has the lowest value
-    }
-    
-    public void CheckSpecificPlayerStat()
-    {
-        //check a specified stats value
-    }
-
-    public void AddDialogueForAllNPCsBasedOnStats()
-    {
-        FindObjectOfType<PlayerDialogue>().AddQuestionForAllNPCs(dialogue);
-    }
-
-    public void AddDialogueForSpecificNPCBasedOnStats()
-    {
-        //DialogueSystem dialogueSystem = FindObjectOfType<DialogueSystem>();
-
         PlayerDialogue playerDialogue = FindObjectOfType<PlayerDialogue>();
 
         playerDialogue.AddQuestionForSpecificNPC(dialogue, npc);
+
+        if (!dialogue.isResponseToNPCDialogue)
+        {
+            playerDialogue.AddDialogueOptions();
+        }
+        else
+        {
+            playerDialogue.AddResponseOptions();
+        }
+
     }
 
-    public void MultipleNPCConversation()
+
+    // To Make:
+    private void MultipleNPCConversation()
     {
         //track multiple npc's in a conversation
             //determine speaking order
             //combine player dialogue options for all npc's
             //apply emotion effects to all npc's
     }
+
+    private void ApplyPlayerStatEffect()
+    {
+        //get player stats
+        //apply stat effects
+
+    }
+
+    private void CheckPlayerStatsForHighest()
+    {
+        //compare current player stats and return whichever has the highest value
+    }
+
+    private void CheckPlayerStatsForLowest()
+    {
+        //compare current player stats and return whichever has the lowest value
+    }
+
+    private void CheckSpecificPlayerStat()
+    {
+        //check a specified stats value
+    }
+
+    private void ChangeCamera()
+    {
+        //Transition to another position / camera
+    }
+
 }
 
